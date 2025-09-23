@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jared Hembree - Resume</title>
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9; color:#222; }
-    header { background:#b30000; color:#fff; text-align:center; padding:22px 16px; }
+    :root{
+      --accent:#b30000; /* red */
+      --ink:#111;
+      --bg:#f6f6f6;
+      --card:#fff;
+    }
+    body.resume { font-family: Arial, sans-serif; margin:0; background:var(--bg); color:var(--ink); }
+    header { background:var(--accent); color:#fff; text-align:center; padding:22px 16px; }
     header a { color:#fff; text-decoration:underline; }
-    .container { max-width: 860px; margin: 18px auto; background:#fff; padding:24px 22px; border:1px solid #ccc; }
-    h2 { color:#b30000; border-bottom:2px solid #000; padding-bottom:6px; margin-top:28px; }
-    ul { list-style-type: none; padding:0; margin:8px 0 0; }
-    li { margin:6px 0; line-height:1.4; }
-    .muted { color:#555; font-size:0.95rem; }
+    .container { max-width:860px; margin:18px auto; background:var(--card); padding:24px 22px; border:1px solid #ddd; }
+    h2 { color:var(--accent); border-bottom:2px solid #000; padding-bottom:6px; margin-top:28px; }
+    ul { list-style:none; padding:0; margin:10px 0 0; }
+    li { margin:6px 0; line-height:1.45; }
+    .muted{ color:#555; font-size:0.95rem; }
+    .sub ul{ margin-left:16px; }
+    .sub li{ list-style:disc; margin-left:16px; }
+    nav{ margin-top:8px; }
+    nav a{ color:#fff; text-decoration:underline; margin:0 6px; }
     footer { background:#000; color:#fff; text-align:center; padding:12px; margin-top:22px; }
   </style>
 </head>
-<body>
+<body class="resume">
 
 <header>
   <h1>Jared Hembree</h1>
   <p>Ashland, AL &nbsp;|&nbsp; <a href="mailto:jqhembree42@gmail.com">jqhembree42@gmail.com</a> &nbsp;|&nbsp; (256) 276-4354</p>
-  <p>
-    <a href="https://github.com/jqhembree42" target="_blank" rel="noopener">GitHub</a> &nbsp;|&nbsp;
-    <a href="https://www.linkedin.com/in/jared-hembree-359353264" target="_blank" rel="noopener">LinkedIn</a> &nbsp;|&nbsp;
-    <a href="https://jqhem42.github.io/Web-Resume/" target="_blank" rel="noopener">Portfolio</a> &nbsp;|&nbsp;
+  <nav>
+    <a href="https://github.com/jqhembree42" target="_blank" rel="noopener">GitHub</a> |
+    <a href="https://www.linkedin.com/in/jared-hembree-359353264" target="_blank" rel="noopener">LinkedIn</a> |
+    <a href="#experience">Experience</a> |
+    <a href="#projects">Projects</a> |
+    <a href="#honors">Honors</a> |
+    <a href="#skills">Skills</a> |
     <a href="https://jqhem42.github.io/hembree-pc-services/" target="_blank" rel="noopener">PC Services</a>
-  </p>
+  </nav>
 </header>
 
 <div class="container">
-  <!-- Sections stay the same as before -->
-  <h2>Education and Certifications</h2>
+  <h2 id="education">Education and Certifications</h2>
   <ul>
     <li><strong>Jacksonville State University (JSU)</strong> — BAS, Computer Information Systems <span class="muted">(Expected Fall 2026)</span></li>
     <li><strong>Central Alabama Community College (CACC)</strong> — AAS, Computer Information Systems <span class="muted">(Mar 2023)</span></li>
@@ -39,7 +51,88 @@
     <li>Google IT Support Professional (CACC CIS) &nbsp;|&nbsp; PC Support Specialist (CACC CIS)</li>
   </ul>
 
-  <!-- Keep rest of sections as in last update -->
+  <h2 id="experience">Work Experience</h2>
+  <ul>
+    <li>
+      <strong>Independent Contractor — Sepal AI</strong> &nbsp;|&nbsp; Remote &nbsp;|&nbsp; <span class="muted">Aug 2025 – Present</span>
+      <div class="sub">
+        <ul>
+          <li>Conduct QA and error detection to improve system reliability</li>
+          <li>Apply IT security protocols; maintain strict confidentiality compliance</li>
+          <li>Process technical documentation with accuracy and consistency</li>
+          <li>Collaborate remotely via Slack, Insightful, Stripe, and cloud systems</li>
+        </ul>
+      </div>
+    </li>
+
+    <li>
+      <strong>IT Student / Lab Technician (Project-Based)</strong> &nbsp;|&nbsp; CACC <span class="muted">(Aug 2020 – May 2023)</span>; JSU <span class="muted">(May 2024 – Present)</span>
+      <div class="sub">
+        <ul>
+          <li>Perform software/hardware installs, evaluations, and diagnostics</li>
+          <li>Hands-on AWS labs: EC2, IAM, S3, ELB, RDS</li>
+          <li>Troubleshoot peer systems; collaborate on Java, Python, and Bash projects</li>
+        </ul>
+      </div>
+    </li>
+
+    <li>
+      <strong>Founder — Hembree PC Services (Freelance IT)</strong> &nbsp;|&nbsp; Ashland, AL &nbsp;|&nbsp; <span class="muted">2025 – Present</span>
+      <div class="sub">
+        <ul>
+          <li>Designed and launched service website (<a href="https://jqhem42.github.io/hembree-pc-services/" target="_blank" rel="noopener">link</a>)</li>
+          <li>Offer PC troubleshooting, hardware installs, and system optimization</li>
+          <li>Established a professional IT service offering and client-ready processes</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+
+  <h2 id="projects">Projects</h2>
+  <ul>
+    <li>
+      <strong>AWS Lab Portfolio</strong>
+      <div class="sub">
+        <ul>
+          <li>Configured EC2 and S3 for hosting simulations</li>
+          <li>Implemented IAM security policies</li>
+          <li>Built mock cloud environments for performance testing</li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <strong>Web Projects</strong>
+      <div class="sub">
+        <ul>
+          <li>Web Resume — <a href="https://jqhem42.github.io/Web-Resume/" target="_blank" rel="noopener">jqhem42.github.io/Web-Resume</a></li>
+          <li>PC Services Site — <a href="https://jqhem42.github.io/hembree-pc-services/" target="_blank" rel="noopener">jqhem42.github.io/hembree-pc-services</a></li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <strong>Hardware &amp; Systems Projects</strong>
+      <div class="sub">
+        <ul>
+          <li>Built custom PC workstations (virtualization/networking practice)</li>
+          <li>Assembled additional PCs (hardware selection, OS setup, troubleshooting)</li>
+          <li>Diagnosed and mitigated overheating issues (thermal management)</li>
+          <li>Designed and implemented a dedicated server lab station</li>
+        </ul>
+      </div>
+    </li>
+  </ul>
+
+  <h2 id="honors">Activities and Honors</h2>
+  <ul>
+    <li>Dean’s List CACC (Fall 2020) &nbsp;|&nbsp; Dean’s List JSU (Fall 2024) &nbsp;|&nbsp; President’s List (Spring 2025)</li>
+    <li>Technical Honors Scholarship &nbsp;|&nbsp; Inducted Member, National Society of Leadership and Success (NSLS), 2025</li>
+  </ul>
+
+  <h2 id="skills">Skills</h2>
+  <ul>
+    <li><strong>Technical:</strong> AWS (EC2, IAM, S3, ELB, RDS), Windows/Linux, Networking & Routing, Java, Python, Bash, Hardware & Software Installation, Scripting</li>
+    <li><strong>Soft Skills:</strong> Collaboration, Communication, Time Management, Problem Solving, Adaptability</li>
+  </ul>
 </div>
 
 <footer>
