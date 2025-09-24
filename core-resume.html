@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jared Hembree — Core Resume</title>
+  <style>
+    :root{
+      --accent:#b30000; --ink:#121212; --bg:#f6f6f6; --card:#ffffff; --line:#e5e5e5;
+      --shadow:0 2px 10px rgba(0,0,0,.06); --shadow-hover:0 10px 24px rgba(0,0,0,.12);
+    }
+    *{box-sizing:border-box}
+    body{font-family:Arial,Helvetica,sans-serif;margin:0;background:var(--bg);color:var(--ink);line-height:1.5}
+
+    /* Header */
+    header{background:var(--accent);color:#fff;text-align:center;padding:22px 16px;position:sticky;top:0;z-index:5}
+    header a{color:#fff;text-decoration:none;position:relative}
+    header .bar a{margin:0 10px}
+    header .bar a::after{content:"";position:absolute;left:0;bottom:-3px;height:2px;width:0;background:#fff;transition:width .2s ease}
+    header .bar a:hover::after{width:100%}
+
+    .wrap{max-width:980px;margin:22px auto;padding:0 14px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;margin:16px 0;box-shadow:var(--shadow);transition:transform .2s ease, box-shadow .2s ease}
+    .card:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover)}
+    h2{color:var(--accent);border-bottom:2px solid #000;padding-bottom:6px;margin-top:0}
+    ul{list-style:none;padding:0;margin:10px 0 0}
+    li{margin:6px 0}
+    .muted{color:#666;font-size:.95rem}
+    .sub ul{margin-left:18px}
+    .sub li{list-style:disc;margin-left:18px}
+
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .chip{border:1px solid var(--line);padding:6px 10px;border-radius:999px;background:#fafafa}
+    .back{display:inline-block;margin:8px 0 0;color:#fff;text-decoration:underline}
+
+    footer{background:#000;color:#fff;text-align:center;padding:12px;margin-top:22px}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="margin:0">Jared Hembree</h1>
+    <p style="margin:6px 0 8px">Ashland, AL &nbsp;|&nbsp;
+      <a href="mailto:jqhembree42@gmail.com">jqhembree42@gmail.com</a> &nbsp;|&nbsp; (256) 276-4354
+    </p>
+    <div class="bar" aria-label="top-links">
+      <a href="resume-landing.html" class="back">← Back to Resume Hub</a>
+      <span aria-hidden="true">|</span>
+      <a href="https://github.com/Jqhem42" target="_blank" rel="noopener">GitHub</a>
+      <span aria-hidden="true">|</span>
+      <a href="https://www.linkedin.com/in/jared-hembree-359353264" target="_blank" rel="noopener">LinkedIn</a>
+      <span aria-hidden="true">|</span>
+      <a href="https://jqhem42.github.io/hembree-pc-services/" target="_blank" rel="noopener">PC Services</a>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <!-- Education -->
+    <section class="card" id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>Jacksonville State University (JSU)</strong> — BAS, Computer Information Systems <span class="muted">(Expected Fall 2026)</span></li>
+        <li><strong>Central Alabama Community College (CACC)</strong> — AAS, Computer Information Systems <span class="muted">(Mar 2023)</span></li>
+        <li class="muted">Auburn — Cloud Systems Administration &nbsp;|&nbsp; NSLS — Certificate of Induction</li>
+        <li class="muted">CACC CIS Google IT Support Professional &nbsp;|&nbsp; CACC CIS PC Support Specialist</li>
+      </ul>
+    </section>
+
+    <!-- Work Experience (general-first) -->
+    <section class="card" id="experience">
+      <h2>Work Experience</h2>
+      <ul>
+        <li>
+          <strong>Walmart — Associate</strong> &nbsp;|&nbsp; Alex City, AL &nbsp;|&nbsp; <span class="muted">Aug 2025 – Present</span>
+          <div class="sub">
+            <ul>
+              <li>Guide customers to products and ensure satisfaction with shopping experience</li>
+              <li>Use inventory system to maintain stock of shelved goods</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <strong>Sepal AI — Independent Contractor / Data Entry (Remote)</strong> &nbsp;|&nbsp; <span class="muted">Aug 2025 – Present</span>
+          <div class="sub">
+            <ul>
+              <li>Reviewed and edited documents for accuracy and consistency</li>
+              <li>Collaborated remotely with an international team using Slack and project tools</li>
+              <li>Maintained confidentiality and compliance with strict company guidelines</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <strong>H&amp;H Farms — Farm Hand / Laborer</strong> &nbsp;|&nbsp; Ashland, AL &nbsp;|&nbsp; <span class="muted">Jan 2016 – May 2025</span>
+          <div class="sub">
+            <ul>
+              <li>Operated machinery, completed construction/repair tasks with hand and power tools</li>
+              <li>Coordinated with team to complete seasonal priorities and projects on time</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <strong>Piggly Wiggly — Customer Service / Bagger</strong> &nbsp;|&nbsp; Ashland, AL &nbsp;|&nbsp; <span class="muted">Jun 2018 – May 2020</span>
+          <div class="sub">
+            <ul>
+              <li>Provided fast, friendly service and supported front-end store operations</li>
+              <li>Handled bagging, carryouts, and general stocking tasks during peak hours</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Activities & Honors -->
+    <section class="card" id="honors">
+      <h2>Activities & Honors</h2>
+      <ul>
+        <li>Dean’s List CACC (Fall 2020) &nbsp;|&nbsp; Dean’s List JSU (Fall 2024) &nbsp;|&nbsp; President’s List (Spring 2025, Summer 2026)</li>
+        <li>Technical Honors Scholarship</li>
+        <li>Inducted Member, <strong>National Society of Leadership and Success (NSLS)</strong>, 2025</li>
+      </ul>
+    </section>
+
+    <!-- Skills (hard skills only for core resume) -->
+    <section class="card" id="skills">
+      <h2>Skills</h2>
+      <div class="chips" aria-label="core-hard-skills">
+        <span class="chip">Microsoft Office Suite</span>
+        <span class="chip">Google Workspace</span>
+        <span class="chip">Data Entry & Accuracy</span>
+        <span class="chip">POS & Inventory Systems</span>
+        <span class="chip">Scheduling Software</span>
+        <span class="chip">Email & Communication Tools</span>
+        <span class="chip">Basic Troubleshooting (office devices)</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2025 Jared Hembree • <a href="resume-landing.html" style="color:#fff;text-decoration:underline">Back to Resume Hub</a>
+  </footer>
+</body>
+</html>

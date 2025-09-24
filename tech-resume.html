@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jared Hembree - Resume</title>
+  <style>
+    :root{
+      --accent:#b30000; /* red */
+      --ink:#121212;
+      --bg:#f6f6f6;
+      --card:#ffffff;
+      --line:#e5e5e5;
+      --shadow:0 2px 10px rgba(0,0,0,.06);
+      --shadow-hover:0 10px 24px rgba(0,0,0,.12);
+    }
+    *{box-sizing:border-box}
+    body.resume { font-family: Arial, sans-serif; margin:0; background:var(--bg); color:var(--ink); line-height:1.5; }
+
+    /* Header */
+    header { background:var(--accent); color:#fff; text-align:center; padding:22px 16px; position:sticky; top:0; z-index:5;
+             transition:box-shadow .25s ease; }
+    header.scrolled{ box-shadow:0 6px 18px rgba(0,0,0,.18); }
+    header a { color:#fff; text-decoration:none; position:relative; }
+    header .bar a{ margin:0 10px; }
+    header .bar a::after{
+      content:""; position:absolute; left:0; bottom:-3px; height:2px; width:0; background:#fff; transition:width .2s ease;
+    }
+    header .bar a:hover::after{ width:100%; }
+
+    /* Layout */
+    .wrap { max-width: 980px; margin:22px auto; padding:0 14px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:22px; margin:16px 0; box-shadow:var(--shadow);
+            transition:transform .2s ease, box-shadow .2s ease; }
+    .card:hover{ transform:translateY(-2px); box-shadow:var(--shadow-hover); }
+    h2 { color:var(--accent); border-bottom:2px solid #000; padding-bottom:6px; margin-top:0; }
+    ul { list-style:none; padding:0; margin:10px 0 0; }
+    li { margin:6px 0; }
+    .muted{ color:#666; font-size:.95rem; }
+
+    /* Nested bullets for roles */
+    .sub ul{ margin-left:18px; }
+    .sub li{ list-style:disc; margin-left:18px; }
+
+    /* Project cards */
+    .grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-top:12px; }
+    .pcard{ border:1px solid var(--line); border-radius:12px; padding:14px; background:#fff; box-shadow:var(--shadow);
+            transition:transform .2s ease, box-shadow .2s ease; }
+    .pcard:hover{ transform:translateY(-3px); box-shadow:var(--shadow-hover); }
+    .pcard h3{ margin:0 0 6px; font-size:1.02rem; }
+    .pcaption{ color:#555; font-size:.95rem; }
+    .pcaption a{ color:var(--accent); text-decoration:none; border-bottom:1px solid transparent; }
+    .pcaption a:hover{ border-bottom-color:var(--accent); }
+
+    /* Skill chips */
+    .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .chip{ border:1px solid var(--line); padding:6px 10px; border-radius:999px; background:#fafafa; }
+    .subhead{ margin:6px 0; color:#444; font-size:1rem; font-weight:bold; }
+
+    /* Footer */
+    footer { background:#000; color:#fff; text-align:center; padding:12px; margin-top:22px; }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      .card, .pcard, header { transition:none; }
+      .card:hover, .pcard:hover{ transform:none; }
+    }
+  </style>
+</head>
+<body class="resume">
+
+<header id="topbar">
+  <h1 style="margin:0">Jared Hembree</h1>
+  <p style="margin:6px 0 8px">Ashland, AL &nbsp;|&nbsp;
+    <a href="mailto:jqhembree42@gmail.com">jqhembree42@gmail.com</a> &nbsp;|&nbsp; (256) 276-4354
+  </p>
+  <div class="bar" aria-label="top-links">
+    <a href="resume-landing.html" class="back">← Back to Resume Hub</a> 
+    <span aria-hidden="true">|</span>
+    <a href="https://github.com/Jqhem42" target="_blank" rel="noopener">GitHub</a>
+    <span aria-hidden="true">|</span>
+    <a href="https://www.linkedin.com/in/jared-hembree-359353264" target="_blank" rel="noopener">LinkedIn</a>
+    <span aria-hidden="true">|</span>
+    <a href="https://jqhem42.github.io/hembree-pc-services/" target="_blank" rel="noopener">PC Services</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- Education -->
+  <section class="card" id="education">
+    <h2>Education and Certifications</h2>
+    <ul>
+      <li><strong>Jacksonville State University (JSU)</strong> — BAS, Computer Information Systems <span class="muted">(Expected Fall 2026)</span></li>
+      <li><strong>Central Alabama Community College (CACC)</strong> — AAS, Computer Information Systems <span class="muted">(Mar 2023)</span></li>
+      <li>Auburn — Cloud Systems Administration</li>
+      <li>Google IT Support Professional (CACC CIS) &nbsp;|&nbsp; PC Support Specialist (CACC CIS)</li>
+    </ul>
+  </section>
+
+  <!-- Experience -->
+  <section class="card" id="experience">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>
+        <strong>Independent Contractor — Sepal AI</strong> &nbsp;|&nbsp; Remote &nbsp;|&nbsp; <span class="muted">Aug 2025 – Present</span>
+        <div class="sub">
+          <ul>
+            <li>Conduct QA and error detection to improve system reliability</li>
+            <li>Apply IT security protocols; maintain strict confidentiality compliance</li>
+            <li>Process technical documentation with accuracy and consistency</li>
+            <li>Collaborate remotely via Slack, Insightful, Stripe, and cloud systems</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <strong>IT Student / Lab Technician (Project-Based)</strong> &nbsp;|&nbsp; CACC <span class="muted">(Aug 2020 – May 2023)</span>; JSU <span class="muted">(May 2024 – Present)</span>
+        <div class="sub">
+          <ul>
+            <li>Perform software/hardware installs, evaluations, and diagnostics</li>
+            <li>Hands-on AWS labs: EC2, IAM, S3, ELB, RDS</li>
+            <li>Troubleshoot peer systems; collaborate on Java, Python, and Bash projects</li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <strong>Founder — Hembree PC Services (Freelance IT)</strong> &nbsp;|&nbsp; Ashland, AL &nbsp;|&nbsp; <span class="muted">2025 – Present</span>
+        <div class="sub">
+          <ul>
+            <li>Designed and launched service website (<a href="https://jqhem42.github.io/hembree-pc-services/" target="_blank" rel="noopener">link</a>)</li>
+            <li>Offer PC troubleshooting, hardware installs, and system optimization</li>
+            <li>Established a professional IT service offering and client-ready processes</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section class="card" id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="pcard">
+        <h3>AWS Lab Portfolio</h3>
+        <p class="pcaption">Configured EC2 and S3 for hosting simulations, implemented IAM policies, and built mock cloud environments for testing.</p>
+      </div>
+      <div class="pcard">
+        <h3>Web Resume</h3>
+        <p class="pcaption"><a href="https://jqhem42.github.io/Web-Resume/" target="_blank" rel="noopener">jqhem42.github.io/Web-Resume</a></p>
+      </div>
+      <div class="pcard">
+        <h3>PC Services Site</h3>
+        <p class="pcaption"><a href="https://jqhem42.github.io/hembree-pc-services/" target="_blank" rel="noopener">jqhem42.github.io/hembree-pc-services</a></p>
+      </div>
+      <div class="pcard">
+        <h3>Hardware &amp; Systems</h3>
+        <p class="pcaption">Built custom PC workstations, assembled additional systems, mitigated overheating (thermal mgmt), and set up a server lab station.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Honors -->
+  <section class="card" id="honors">
+    <h2>Activities and Honors</h2>
+    <ul>
+      <li>Dean’s List CACC (Fall 2020) &nbsp;|&nbsp; Dean’s List JSU (Fall 2024) &nbsp;|&nbsp; President’s List (Spring 2025)</li>
+      <li>Technical Honors Scholarship</li>
+      <li>Inducted Member, <strong>National Society of Leadership and Success (NSLS)</strong>, 2025</li>
+    </ul>
+  </section>
+
+  <!-- Skills -->
+  <section class="card" id="skills">
+    <h2>Skills</h2>
+    <div class="subhead">Technical Skills</div>
+    <div class="chips" aria-label="technical-skills">
+      <span class="chip">AWS (EC2, IAM, S3, ELB, RDS)</span>
+      <span class="chip">Windows/Linux</span>
+      <span class="chip">Networking & Routing</span>
+      <span class="chip">Java</span>
+      <span class="chip">Python</span>
+      <span class="chip">Bash</span>
+      <span class="chip">Hardware & Software</span>
+      <span class="chip">Scripting</span>
+    </div>
+
+    <div class="subhead" style="margin-top:12px">Soft Skills</div>
+    <div class="chips" aria-label="soft-skills">
+      <span class="chip">Collaboration</span>
+      <span class="chip">Communication</span>
+      <span class="chip">Time Management</span>
+      <span class="chip">Problem Solving</span>
+      <span class="chip">Adaptability</span>
+    </div>
+  </section>
+</div>
+
+<footer>
+  &copy; 2025 Jared Hembree &nbsp;|&nbsp; Resume
+</footer>
+
+<script>
+  // header shadow on scroll
+  const topbar = document.getElementById('topbar');
+  const onScroll = () => topbar.classList.toggle('scrolled', window.scrollY > 6);
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+
+</body>
+</html>
